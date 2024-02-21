@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Boutique de surf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Panier</h1>
+    </header>
+
+    <div class="container">
+        <h2>Votre commande</h2>
+        <div class="product">
+            <img src="images/Board.jpg" alt="Planche de surf">
+            <h3>Planche de surf</h3>
+            <p>Lib Tech Lost Rnf 96 5'9 Planche de surf</p>
+            <p>Prix: 879,95€</p>
+        </div>
+
+        <h2>Informations de commande</h2>
+        <form action="process_commande.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required><br>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required><br>
+
+            <label for="adresse">Adresse :</label>
+            <textarea id="adresse" name="adresse" required></textarea><br>
+
+            <label for="methode_livraison">Méthode de livraison :</label>
+            <select id="methode_livraison" name="methode_livraison" required>
+                <option value="standard">Livraison standard (4 à 6 jours ouvrés)</option>
+                <option value="express">Livraison express (2 jours ouvrés)</option>
+            </select><br>
+
+            <button type="submit">Passer la commande</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Boutique de surf. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
